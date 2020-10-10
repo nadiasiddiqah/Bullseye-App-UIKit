@@ -10,13 +10,13 @@ import UIKit
 class ViewController: UIViewController {
     
     // Instance properties
-    var currentValue = 50       // initial value doesn't matter
-    var targetValue = 0         // initial value doesn't matter
-    var round = 0
+    var targetValue = 0         // initial value doesn't matter (changed by viewDidLoad())
+    var sliderValue = 0         // initial value doesn't matter (changed by viewDidLoad())
     var totalScore = 0
+    var round = 0
     
-    @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var targetLabel: UILabel!        // targetLabel Outlet references UILabel object
+    @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var totalScoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
 
@@ -24,12 +24,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        startNewRound()     // starts first round when Viewcontroller loads
+        startNewRound()     // starts new game when Viewcontroller loads
+        customizedSlider()      // loads customized slider
     }
     
     // Action method for when user taps the Button
     @IBAction func showAlert() {
-      let difference = abs(currentValue - targetValue)
+      let difference = abs(sliderValue - targetValue)
       var points = 100 - difference    // change let to var (since if statements add bonus points)
       
       let title: String
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
       }
       totalScore += points   // move this down so that app updates points after if statements
         
-        let message = "You hit \(currentValue). Your score is \(points) points this round!"
+        let message = "You were off by \(difference). Your score is \(points) points this round!"
         
         let alert = UIAlertController(title: title,
                                       message: message,
@@ -63,15 +64,21 @@ class ViewController: UIViewController {
     
     // Action method for when user drags the slider
     @IBAction func sliderMoved(slider: UISlider) {
-        currentValue = lroundf(slider.value)        // lroundf method = converts Double -> Int
+        sliderValue = lroundf(slider.value)        // lroundf method = converts Double -> Int
+    }
+    
+    // Action method to start over when user presses the button
+    @IBAction func startOver() {
+        totalScore = 0
+        round = 0
+        startNewRound()
     }
     
     // Method for when user starts a new round
     func startNewRound() {
       round += 1
-      targetValue = Int.random(in: 1...100)    // generates a new random number
-      currentValue = 50                        // resets currentValue to 50 (Int)
-      slider.value = Float(currentValue)       // sets UISlider value by converting currentValue into float
+      targetValue = Int.random(in: 1...100)     // generates a new random number
+      slider.value = Float(Int.random(in: 1...100))     // sets UISlider value by converting random# into float
       updateLabels()
     }
 
@@ -80,6 +87,30 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)      // sets UILabel value by converting targetValue into string
         totalScoreLabel.text = String(totalScore)
         roundLabel.text = String(round)
+    }
+    
+    // Method to customize slider in IB
+    func customizedSlider() {
+        // Customize slider's setThumbImage (normal)
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        // Customize slider's setThumbImage (highlighted)
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        // Define "inset" (view frame) dimensions of slider's track image
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        // Customize slider's setMinimumTrackImage
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")
+        let trackLeftResizable = trackLeftImage?.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        // Customize slider's setMaximumTrackImage
+        let trackRightImage = UIImage(named: "SliderTrackRight")
+        let trackRightResizable = trackRightImage?.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
 }
 
