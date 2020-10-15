@@ -42,6 +42,7 @@
 		096AD5B4252D2A9F008C5FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B2252D2A9F008C5FAB /* Main.storyboard */; };
 		096AD5B6252D2AA2008C5FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B5252D2AA2008C5FAB /* Assets.xcassets */; };
 		096AD5B9252D2AA2008C5FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B7252D2AA2008C5FAB /* LaunchScreen.storyboard */; };
+		09B5AB0F2537997000502A95 /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B5AB0E2537997000502A95 /* HighScoresTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		096AD5B5252D2AA2008C5FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096AD5B8252D2AA2008C5FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		096AD5BA252D2AA2008C5FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B5AB0E2537997000502A95 /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				096AD5B0252D2A9F008C5FAB /* ViewController.swift */,
 				0950EFDB25312B5A00870F30 /* AboutViewController.swift */,
 				096AD5B2252D2A9F008C5FAB /* Main.storyboard */,
+				09B5AB0E2537997000502A95 /* HighScoresTableViewController.swift */,
 				096AD5B5252D2AA2008C5FAB /* Assets.xcassets */,
 				096AD5B7252D2AA2008C5FAB /* LaunchScreen.storyboard */,
 				096AD5BA252D2AA2008C5FAB /* Info.plist */,
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B5AB0F2537997000502A95 /* HighScoresTableViewController.swift in Sources */,
 				096AD5B1252D2A9F008C5FAB /* ViewController.swift in Sources */,
 				096AD5AD252D2A9F008C5FAB /* AppDelegate.swift in Sources */,
 				0950EFDC25312B5A00870F30 /* AboutViewController.swift in Sources */,

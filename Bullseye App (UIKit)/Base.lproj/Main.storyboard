@@ -53,7 +53,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dE3-mS-C5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.58695652173915" y="931.88405797101461"/>
+            <point key="canvasLocation" x="796" y="88"/>
+        </scene>
+        <!--High Scores Table View Controller-->
+        <scene sceneID="uro-SB-iQA">
+            <objects>
+                <tableViewController id="ogE-7A-SSc" customClass="HighScoresTableViewController" customModule="Bullseye_App__UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="niT-X2-YrJ">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreCell" id="PZ1-BR-gxT">
+                                <rect key="frame" x="0.0" y="28" width="736" height="44.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PZ1-BR-gxT" id="Bpg-dL-cQD">
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="44.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-DT-Vse" userLabel="scoreLabel">
+                                            <rect key="frame" x="54" y="11.000000000000002" width="41.333333333333343" height="21.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-9s-7aF" userLabel="nameLabel">
+                                            <rect key="frame" x="634.66666666666663" y="10.000000000000002" width="41.333333333333371" height="21.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5yB-DT-Vse" firstAttribute="leading" secondItem="Bpg-dL-cQD" secondAttribute="leadingMargin" constant="34" id="2vP-Uh-sxa"/>
+                                        <constraint firstItem="5yB-DT-Vse" firstAttribute="top" secondItem="Bpg-dL-cQD" secondAttribute="topMargin" id="9ha-ef-sj5"/>
+                                        <constraint firstItem="2hp-9s-7aF" firstAttribute="top" secondItem="Bpg-dL-cQD" secondAttribute="topMargin" constant="-1" id="KYp-gt-hAC"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2hp-9s-7aF" secondAttribute="trailing" constant="40" id="U9X-8b-nZA"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5yB-DT-Vse" secondAttribute="bottom" constant="0.66666793823242188" id="bZS-oq-Jug"/>
+                                        <constraint firstItem="2hp-9s-7aF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5yB-DT-Vse" secondAttribute="trailing" constant="8" symbolic="YES" id="r9D-BM-gjL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2hp-9s-7aF" secondAttribute="bottom" constant="1.6666679382324219" id="reA-q6-b9D"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ogE-7A-SSc" id="R09-AT-E7a"/>
+                            <outlet property="delegate" destination="ogE-7A-SSc" id="qMR-RM-tyK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nAc-Dw-o7x"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H78-3M-lio" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.58695652173915" y="871.01449275362324"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -163,6 +215,14 @@
                                     <action selector="sliderMovedWithSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="5XL-Lb-AvN"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkO-KJ-pT4">
+                                <rect key="frame" x="675" y="313" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="🏆" backgroundImage="SmallButton"/>
+                                <connections>
+                                    <segue destination="ogE-7A-SSc" kind="show" id="wZc-oC-ont"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtc-oL-UVX">
                                 <rect key="frame" x="318" y="221" width="100" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
