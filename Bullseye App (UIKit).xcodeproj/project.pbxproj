@@ -36,13 +36,16 @@
 		0950F01E2531311800870F30 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 0950F0032531311800870F30 /* Icon-40.png */; };
 		0950F01F2531311800870F30 /* Icon-87.png in Resources */ = {isa = PBXBuildFile; fileRef = 0950F0042531311800870F30 /* Icon-87.png */; };
 		0950F0202531311800870F30 /* Icon-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 0950F0052531311800870F30 /* Icon-20.png */; };
+		095C9C07253EA3EA00F81F9A /* EditHighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095C9C06253EA3EA00F81F9A /* EditHighScoreViewController.swift */; };
 		096AD5AD252D2A9F008C5FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AD5AC252D2A9F008C5FAB /* AppDelegate.swift */; };
 		096AD5AF252D2A9F008C5FAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AD5AE252D2A9F008C5FAB /* SceneDelegate.swift */; };
 		096AD5B1252D2A9F008C5FAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AD5B0252D2A9F008C5FAB /* ViewController.swift */; };
 		096AD5B4252D2A9F008C5FAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B2252D2A9F008C5FAB /* Main.storyboard */; };
 		096AD5B6252D2AA2008C5FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B5252D2AA2008C5FAB /* Assets.xcassets */; };
 		096AD5B9252D2AA2008C5FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096AD5B7252D2AA2008C5FAB /* LaunchScreen.storyboard */; };
+		099673C32539093A0070C9B5 /* HighScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099673C22539093A0070C9B5 /* HighScoreItem.swift */; };
 		09B5AB0F2537997000502A95 /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B5AB0E2537997000502A95 /* HighScoresTableViewController.swift */; };
+		09F0CD57253A46B40026FA29 /* PersistencyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F0CD56253A46B40026FA29 /* PersistencyHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,7 @@
 		0950F0032531311800870F30 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		0950F0042531311800870F30 /* Icon-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-87.png"; sourceTree = "<group>"; };
 		0950F0052531311800870F30 /* Icon-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-20.png"; sourceTree = "<group>"; };
+		095C9C06253EA3EA00F81F9A /* EditHighScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHighScoreViewController.swift; sourceTree = "<group>"; };
 		096AD5A9252D2A9F008C5FAB /* Bullseye App (UIKit).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bullseye App (UIKit).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096AD5AC252D2A9F008C5FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		096AD5AE252D2A9F008C5FAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +87,9 @@
 		096AD5B5252D2AA2008C5FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		096AD5B8252D2AA2008C5FAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		096AD5BA252D2AA2008C5FAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		099673C22539093A0070C9B5 /* HighScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoreItem.swift; sourceTree = "<group>"; };
 		09B5AB0E2537997000502A95 /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
+		09F0CD56253A46B40026FA29 /* PersistencyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,9 @@
 				096AD5B5252D2AA2008C5FAB /* Assets.xcassets */,
 				096AD5B7252D2AA2008C5FAB /* LaunchScreen.storyboard */,
 				096AD5BA252D2AA2008C5FAB /* Info.plist */,
+				099673C22539093A0070C9B5 /* HighScoreItem.swift */,
+				09F0CD56253A46B40026FA29 /* PersistencyHelper.swift */,
+				095C9C06253EA3EA00F81F9A /* EditHighScoreViewController.swift */,
 			);
 			path = "Bullseye App (UIKit)";
 			sourceTree = "<group>";
@@ -304,10 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09B5AB0F2537997000502A95 /* HighScoresTableViewController.swift in Sources */,
+				099673C32539093A0070C9B5 /* HighScoreItem.swift in Sources */,
+				09F0CD57253A46B40026FA29 /* PersistencyHelper.swift in Sources */,
 				096AD5B1252D2A9F008C5FAB /* ViewController.swift in Sources */,
 				096AD5AD252D2A9F008C5FAB /* AppDelegate.swift in Sources */,
 				0950EFDC25312B5A00870F30 /* AboutViewController.swift in Sources */,
 				096AD5AF252D2A9F008C5FAB /* SceneDelegate.swift in Sources */,
+				095C9C07253EA3EA00F81F9A /* EditHighScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

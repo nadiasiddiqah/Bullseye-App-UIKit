@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        startNewRound()     // starts new game when Viewcontroller loads
+        startNewGame()     // starts new game when Viewcontroller loads
         customizedSlider()      // loads customized slider
     }
     
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
                                       preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default,
                                    handler: {_ in 
-                                            self.startNewRound()
+                                            self.startNewGame()
                                             })
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
@@ -71,11 +71,12 @@ class ViewController: UIViewController {
     @IBAction func startOver() {
         totalScore = 0
         round = 0
-        startNewRound()
+        startNewGame()
     }
     
-    // Method for when user starts a new round
-    func startNewRound() {
+    // Method for when user starts a new round/game
+    func startNewGame() {
+      addHighScore(totalScore)       // add totalScore to high scores list after each round
       round += 1
       targetValue = Int.random(in: 1...100)     // generates a new random number
       slider.value = Float(Int.random(in: 1...100))     // sets UISlider value by converting random# into float
@@ -112,5 +113,21 @@ class ViewController: UIViewController {
         let trackRightResizable = trackRightImage?.resizableImage(withCapInsets: insets)
         slider.setMaximumTrackImage(trackRightResizable, for: .normal)
     }
-}
+    
+    // Adds totalScore from each round to highScores screen
+    func addHighScore(_ totalScore: Int) {
+        guard totalScore > 0 else {
+            return;
+        }
+        
+        let highscore = HighScoreItem()
+        highscore.score = totalScore
+        highscore.name = "Unknown"
+        
+        var highScores = PersistencyHelper.loadHighScores()
+        highScores.append(highscore)
+        highScores.sort { $0.score > $1.score }     // ($0 - first parameter needs to be higher than $1 - second parameter)
+        PersistencyHelper.saveHighScores(highScores)
+    }
 
+}
