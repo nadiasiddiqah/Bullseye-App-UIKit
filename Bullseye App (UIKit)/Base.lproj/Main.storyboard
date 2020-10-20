@@ -58,27 +58,27 @@
         <!--🏆 High Scores 🏆-->
         <scene sceneID="uro-SB-iQA">
             <objects>
-                <tableViewController id="ogE-7A-SSc" customClass="HighScoresTableViewController" customModule="Bullseye_App__UIKit_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ogE-7A-SSc" customClass="HighScoresViewController" customModule="Bullseye_App__UIKit_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="niT-X2-YrJ">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighScoreCell" id="PZ1-BR-gxT">
-                                <rect key="frame" x="0.0" y="28" width="736" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="736" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PZ1-BR-gxT" id="Bpg-dL-cQD">
-                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-DT-Vse" userLabel="scoreLabel">
-                                            <rect key="frame" x="54" y="11" width="41.333333333333343" height="21"/>
+                                            <rect key="frame" x="54" y="10.999999999999998" width="41.333333333333343" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2000" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hp-9s-7aF" userLabel="nameLabel">
-                                            <rect key="frame" x="634.66666666666663" y="10" width="41.333333333333371" height="21"/>
+                                            <rect key="frame" x="634.66666666666663" y="9.9999999999999982" width="41.333333333333371" height="21.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -107,7 +107,7 @@
                     <navigationItem key="navigationItem" title="🏆 High Scores 🏆" id="nAc-Dw-o7x">
                         <barButtonItem key="rightBarButtonItem" title="Reset" id="fE8-fG-keO">
                             <connections>
-                                <action selector="resetHighScores" destination="ogE-7A-SSc" id="N2V-FZ-Oel"/>
+                                <action selector="resetHighScores" destination="ogE-7A-SSc" id="vTY-tR-VA0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
